@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Tech Triumphs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="game-container">
+        <header>
+            <h1>Tech Triumphs: Pharmacy Edition</h1>
+            <div class="status-bar">
+                <span id="score">Score: 0</span>
+                <div id="patience-bar-container">
+                    Patience: <div id="patience-bar"></div>
+                </div>
+            </div>
+        </header>
+
+        <main id="queue-area">
+            <div id="mob-display">
+                <p>Waiting for the next challenger...</p>
+            </div>
+        </main>
+
+        <footer id="weapon-panel">
+            <button class="weapon-btn" data-weapon-id="1">Oh Jamie</button>
+            <button class="weapon-btn" data-weapon-id="2">Good Day</button>
+            <button class="weapon-btn" data-weapon-id="3">Turn Computer</button>
+            <button class="weapon-btn" data-weapon-id="4">Call Doctor</button>
+            <button class="weapon-btn" data-weapon-id="5">Explain Policy</button>
+            <button class="weapon-btn" data-weapon-id="6">Witchcraft</button>
+            <button class="weapon-btn" data-weapon-id="7">Get Manager</button>
+        </footer>
+
+        <div id="game-over-modal" class="hidden">
+            <h2>Shift Over!</h2>
+            <p>You ran out of patience. Final Score: <span id="final-score"></span></p>
+            <button onClick="window.location.reload()">New Shift</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

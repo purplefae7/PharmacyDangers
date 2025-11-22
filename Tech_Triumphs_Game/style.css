@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+#game-container {
+    width: 100%;
+    max-width: 500px; /* Max width for a mobile-friendly feel */
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- Header & Status Bar --- */
+header {
+    background-color: #007c6f; /* Safeway/Pharmacy-inspired color */
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.status-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9em;
+}
+
+#patience-bar-container {
+    flex-grow: 1;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+#patience-bar {
+    height: 15px;
+    width: 70%;
+    background-color: #ff4d4d; /* Low patience color */
+    border-radius: 5px;
+    transition: width 0.3s;
+    margin-left: 5px;
+}
+
+/* --- Mob Display Area --- */
+#queue-area {
+    flex-grow: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#mob-display {
+    background-color: #fff8e1;
+    border: 2px solid #ffcc80;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+}
+
+.mob-name {
+    font-size: 1.8em;
+    color: #cc5500;
+    margin-bottom: 10px;
+}
+
+.mob-hp {
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+/* --- Weapon Panel --- */
+#weapon-panel {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 5px;
+    padding: 10px;
+    background-color: #333;
+}
+
+.weapon-btn {
+    padding: 15px 5px;
+    background-color: #009688;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.8em;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.weapon-btn:hover:not(:disabled) {
+    background-color: #00796b;
+}
+
+.weapon-btn:disabled {
+    background-color: #666;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* --- Game Over Modal --- */
+#game-over-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 100;
+}
+
+.hidden {
+    display: none !important;
+}
